@@ -1,24 +1,51 @@
-# README
+# メモ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 環境構築
+gemをインストールする
+```
+$ gem install bundler
+```
+Ruby on Railsをインストールする
+```
+$ gem install rails
+```
 
-Things you may want to cover:
+## Railsコマンド
+Railsアプリケーションを作成
+```
+$ rails new <アプリ名>
+```
+APIのみのアプリケーションを作成
+```
+$ rails new <アプリ名> --api
+```
+MySQLを使うアプリケーション
+```
+$ rails new weblog -d mysql
+```
+サーバーを立ち上げる
+```
+$ rails server
+```
+マイグレーションファイルの作成
+```
+$ rails generate migration <マイグレーションファイル名>
+```
+マイグレーションの実行
+```
+rails db:migrate
+```
+Modelを作成する
+```
+$ rails generate model <モデル名> <カラム名:データ型> <カラム名:データ型> …
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 重要なディレクトリ
+### Model
+app/models
+### View
+app/views
+### Controller
+app/controllers
+### Routing
+config/routes.rb
